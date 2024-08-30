@@ -1,38 +1,223 @@
-.App {
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  background: #67be9b;
+}
+
+.center-content{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+@media(max-width: 500px){
+  .center-content{
+    height: 780px;
+    justify-content: initial;
+    padding-top: 40px;
+  }
+}
+
+.content-search{
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.search-top{
+  width: 40%;
+}
+
+.search{
+  width: 100%;
+}
+
+.search input{
+  width: 100%;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.search-result{
+  width: 100%;
+  background-color: white;
+  margin-top: 5px;
+}
+
+.search-result div{
+  width: 100%;
+  padding: 10px 25px;
+  background: white;
+  cursor: pointer
+}
+
+.search-result div:hover{
+  background-color: #c5e2ed;
+  font-weight: 500;
+}
+
+.content-table{
+  margin-top: 18px;
+  width: 70%;
+  background: #d8eae3;
+}
+
+@media(max-width: 500px){
+  .content-table{
+    background: none;
+  }
+  
+}
+
+.table thead{
+  border-bottom: solid 1px #c0bfbf;
+}
+
+.table td{
+  font-weight: 500;
+}
+
+.hide-message{
+  display: none;
+}
+
+.form-check{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  width: 100%;;
+}
+
+.form-switch .form-check-input{
+  width: 3.5em;
+}
+
+.form-check-label{
+  padding-left: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.form-check-input{
+  height: 2em;
+}
+
+.Toggle{
+  position: relative;
+}
+button {
+  background-color: #a9a9a96b;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50px;
+  height: 80px;
+  width: 172px;
+}
+
+button:focus,
+button:active { outline: none; }
+
+.switch {
+  background-color: white;
+  border-radius: 98px;
+  position: absolute;
+  top: 0.1rem;
+  width: 76px;
+  height: 77px;
+  left: 0.1rem;
+  transition: left ease .4s;
+}
+
+button.on {
+  background-color: green;
+}
+
+button.on .switch {
+  left: 5.9rem;
+}
+
+.form-check-input:focus{
+  box-shadow: none;
+}
+
+.darkmode{
+  background: #ef8e7d;
+}
+
+@media(max-width: 500px){
+
+  .search-top{
+    width: 70%;
+  }
+
+  .content-table{
+    overflow: scroll;
+  }
+
+}
+
+/*Tabla*/
+.content-table-info{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #d8eae3;
+  border-radius: 5px;
+}
+
+@media(max-width: 768px){
+  .content-table{
+    width: 90%;
+  }
+}
+
+.content-table-info div{
+  width: 20%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-table-info div h3{
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: solid 1px #bebebe;
+  padding: 10px 0px 10px 0px;
+  color: #000
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content-table-info div p{
+  font-weight: 500;
+}
+
+@media(max-width: 600px){
+  .content-table-info{
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width: 500px){
+  .content-table-info{
+    flex-direction: column;
+    background: none;
+    margin-top: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content-table-info div{
+    width: 100%;
+    margin-bottom: 10px;
+    background: #d8eae3;
   }
 }
